@@ -123,12 +123,35 @@ onlyLetters(`Hi I am 29`)
    Write a function called "isThisAnEmail" which receives a string as a parameter and returns true if the string is a valid email address.
 */
 function isThisAnEmail(myString) {
-    for (let i=0; i<myString.length)
+    for (let i=0; i<myString.length; i++) {
+        if (myString[i] === `@`) {
+            return true
+        } else {
+            continue
+        }
+    }
+  return false
 }
+
+isThisAnEmail("matteo.santini@gmail.com")
 /* Ex.7
    Write a function called "whatDayIsIt" that should return the current day of the week.
 */
-
+function whatDayIsIt() {
+    const d = new Date();
+     const weekday = new Array(7);
+     weekday[0] = "Sunday";
+     weekday[1] = "Monday";
+     weekday[2] = "Tuesday";
+     weekday[3] = "Wednesday";
+     weekday[4] = "Thursday";
+     weekday[5] = "Friday";
+     weekday[6] = "Saturday";
+   
+   return n = weekday[d.getDay()];
+   }
+   whatDayIsIt()
+   
 /* Ex.8
     Write a function called "rollTheDices" which receives a number as a parameter.
     It should invoke the dice() function defined in Ex1 the specified amount of times,
