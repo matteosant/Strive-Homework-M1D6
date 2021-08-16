@@ -151,7 +151,7 @@ function whatDayIsIt() {
    return n = weekday[d.getDay()];
    }
    whatDayIsIt()
-   
+
 /* Ex.8
     Write a function called "rollTheDices" which receives a number as a parameter.
     It should invoke the dice() function defined in Ex1 the specified amount of times,
@@ -160,8 +160,33 @@ function whatDayIsIt() {
     Example: RollTheDices(3) => returns {
         sum: 10
         values: [3, 3, 4]
-    }
+    }    
 */
+
+function rollTheDices(n) {
+    
+    
+    function dice() {
+   const min = Math.ceil(1);
+    const max = Math.floor(6);
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+  let nArray = []
+    for (let i = 0; i < n; i++){
+    nArray.push(dice())
+      }
+  const sumNumbers = nArray.reduce((result,number)=> result+number);
+      
+const myObjet = {
+  num: sumNumbers,
+  values: nArray
+}
+
+ return myObjet
+}
+rollTheDices(5)
+
+
 
 /* Ex.9
    Write a function called "howManyDays" which receives a date as a parameter and should return the number of days passed since that date.
