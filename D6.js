@@ -15,58 +15,116 @@
 /* Ex.A
    Create a variable called "test" and assign a string to it.
 */
-
+let test = "Hello test!"
+console.log(test)
 /* Ex.B
     Create a variable called "sum" and assign to it the result of the sum between 10 and 20.
 */
+let sum = 10 + 20
 
+console.log(sum)
 /* Ex.C 
     Create a variable called "random" and assign to it a random number between 0 and 20 (it should be randomly created at each execution).
 */
 
+  let random = Math.floor(Math.random() * 20);
+  console.log(random)
+  
 /* Ex.D
     Create a variable called "me" and assign to it an object containing the following information: name = your name, surname = your surname, age = your age.
 */
+const me = {
+    name: `Matteo`,
+    surname: `Santini`,
+    age: `29`
+}
 
 /* Ex.E 
     Programmatically remove the age property from the previously create object.
 */
-
+delete me.age
 /* Ex.F 
    Programmatically add to the object me an array called "skills", containing the programming languages you know right now.
 */
-
+me.skills = [`html`, `JavaScript`, `CSS`, `a bit of C++`]
+me;
 /* Ex.G 
    Programmatically remove the last skill from the "skills" array inside the "me" object.
 */
+me.skills.pop()
+me.skills
 
 // JS Functions
 /* Ex.1
     Write a function called "dice"; it should randomize an integer number between 1 and 6.
 */
-
+function dice() {
+   const min = Math.ceil(1);
+    const max = Math.floor(6);
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+dice()
 /* Ex.2 
     Write a function called "whoIsBigger" which receives 2 numbers as parameters and returns the biggest one.
 */
+
+function whoIsBigger(num1, num2){
+    if (num1>num2){
+        return num1
+    } else if (num2 > num1){
+        return num2
+    } else {
+        return `The numbers are equal`
+    }
+}
+whoIsBigger(4, 55)
+
 
 /* Ex.3
     Write a function called "splitMe" which receives a string as a parameter and returns an array with every word in that string.
     Ex. splitMe("I love coding") => returns ["I", "Love", "Coding"]
 */
 
+function splitMe (myString){
+    return myString.split(` `)
+    }
+    splitMe(`Hey this is an array now`)
+
 /* Ex.4
     Write a function called "deleteOne" which receives a string and a boolean as parameters. If the boolean value is true it should return the string without the first letter, otherwise it should remove the last one from it.
 */
+
+function deleteOne (myString, myBoolean) {
+    if (myBoolean = true) {
+        myString = myString.slice(1)
+        return myString
+    } else {
+        myString = myString.slice(0, myString.length-1)
+        return myString
+    }
+}
 
 /* Ex.5
    Write a function called "onlyLetters" which receives a string as a parameter and returns it removing all the digits.
    Ex.: onlyLetters("I have 4 dogs")  => returns "I have  dogs"
 */
+function onlyLetters (myString) {
+    let newString = ""
+    for (let i = 0; i<myString.length; i++) {
+        if (!Number(myString[i])) {
 
+          newString += myString[i]
+        } 
+    }
+    return newString
+}
+onlyLetters(`Hi I am 29`)
 /* Ex.6 
    Write a function called "isThisAnEmail" which receives a string as a parameter and returns true if the string is a valid email address.
 */
-
+function isThisAnEmail(myString) {
+    for (let i=0; i<myString.length)
+}
 /* Ex.7
    Write a function called "whatDayIsIt" that should return the current day of the week.
 */
