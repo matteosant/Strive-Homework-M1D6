@@ -191,18 +191,32 @@ rollTheDices(5)
 /* Ex.9
    Write a function called "howManyDays" which receives a date as a parameter and should return the number of days passed since that date.
 */
-
+function howManyDays(date1) {
+    let currentTime = new Date()
+    const Difference_In_Time = currentTime.getTime() - date1.getTime();
+    const Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+    return `${Math.floor(Difference_In_Days)} has passed since ${date1}`
+}
+howManyDays(new Date("08/01/2021"))
 /* Ex.10
    Write a function called "isTodayMyBirthday" which should return true if today's your birthday, false otherwise.
 */
-
+function isTodayMyBirthday() {
+    const dateParameter = new Date("02/16/21")
+          var today = new Date();
+          return dateParameter.getDate() === today.getDate() && dateParameter.getMonth() === today.getMonth();
+  }
+  isTodayMyBirthday()
+  
 // JS Arrays // Objs
 // NOTE: movies array is defined at the end of this file!
 
 /* Ex.11
    Write a function called "deleteProp" which receives an object and a string as parameters, and returns the given object after deleting its property named as the given string.
 */
-
+function deleteProp {
+    
+}
 /* Ex.12 
     Write a function called "olderMovie" which finds the oldest movie in the array provided at the end of this file.
 */
